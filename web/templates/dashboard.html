@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Financial Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .dashboard {
+            max-width: 800px;
+            margin: auto;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .stat {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h2>Financial Dashboard</h2>
+        <div class="stat"><strong>Stock Ticker:</strong> {{ data['ticker'] }}</div>
+        <div class="stat"><strong>Latest Close:</strong> ${{ data['latest_close'] }}</div>
+        <div class="stat"><strong>Year High:</strong> ${{ data['year_high'] }}</div>
+        <div class="stat"><strong>Year Low:</strong> ${{ data['year_low'] }}</div>
+        <div class="stat"><strong>Forecast:</strong> {{ data['forecast'] }}</div>
+    </div>
+</body>
+</html>
